@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/text.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Benne&family=Libre+Baskerville:ital@1&display=swap"
+        rel="stylesheet">
+    <meta charset="utf-8">
+</head>
+
+<body onload="onLoadSelect()">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+            aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#main">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#add">Add</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#update">Update</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#delete">Delete</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <!--Container part to display todo-->
+
+    <div class="container-header-post">
+        <header>
+            <div class="main-title" id="main">
+                <img src="img/arabesque.png" class="main-img" />
+                <h1>TodoList</h1>
+                <hr class="hr" />
+            </div>
+
+
+            <div class="container container-wrap" id="addSection">
+                <div class="raw">
+
+                    <!--Card container-->
+                    <div class="content-container">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Id</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Description </th>
+                                    <th scope="col">Deadline</th>
+                                    <th scope="col">Done</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tableContent">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+
+        <div class="container" id="add">
+            <div class="raw">
+                <div class="title">
+                    <h2>Add :</h2>
+                </div>
+                <div class="add-container content-container">
+                    <input type="hidden" id="hiddenId"></input>
+                    <div class="form" id="form">
+                        <label>Title :</label>
+                        <input type="text" id="titleId" />
+
+                        <label>Descrption :</label>
+                        <input type="text" id="descId" />
+
+                        <div class="dateRow">
+                            <p>
+                                <label>Day :</label>
+                                <input type="number" min="0" max="31" id="d" />
+                            </p>
+                            <p>
+                                <label>Month :</label>
+                                <input type="number" min="0" max="31" id="m" />
+                            </p>
+                            <p>
+                                <label>Years :</label>
+                                <input type="number" min="0" max="9999" id="y" />
+                            </p>
+                        </div>
+
+
+
+                        <div class="raw-button">
+                            <button type="button" class="btn btn-primary" id="submit"
+                                onclick="changeSubmit(hiddenId.value)">Submit</button>
+                            <button type="button" class="btn btn-secondary">Reset</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+<script type="text/javascript" src="js/json.js"></script>
+
+</html>
